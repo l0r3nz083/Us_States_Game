@@ -34,11 +34,7 @@ while game_is_on:
     if len(correct_guesses) == len(df):
         game_is_on = False
 
-miss_states = []
-
-for state in df["state"]:
-    if state not in correct_guesses:
-        miss_states.append(state)
+miss_states = [stato for stato in df["state"] if stato not in correct_guesses ]
 
 states_to_learn = pd.DataFrame(miss_states)
 states_to_learn.to_csv("states_to_learn.csv")

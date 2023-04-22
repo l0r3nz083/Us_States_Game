@@ -11,7 +11,6 @@ class Poster(Turtle):
         self.penup()
         self.color("black")
         self.cor = (x, y)
-        self.speed("slowest")
         self.positioning()
         self.write(state, align="center", font=FONT)
 
